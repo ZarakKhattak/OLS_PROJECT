@@ -73,7 +73,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\LoginData.cs" />
+    <Compile Include="Model\Rental.cs" />
+    <Compile Include="Model\Vehicle.cs" />
+    <Compile Include="Model\VehicleProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DBManager.cs" />
     <Compile Include="Views\Home.aspx.cs">
