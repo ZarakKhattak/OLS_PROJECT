@@ -62,5 +62,33 @@ namespace OLS_PROJECT.Utils
             OracleCommand _command = CreateOracleCommand(loginData, str);
             _command.ExecuteNonQuery();
         }
+
+        public static void DeleteCustomerByID(string CustomerID, LoginData loginData)
+        {
+            string str = string.Format("DELETE FROM Customer WHERE CustomerID = '{0}'", CustomerID);
+            OracleCommand _command = CreateOracleCommand(loginData, str);
+            _command.ExecuteNonQuery();
+        }
+
+        public static void DeleteRentalByID(string RentalID, LoginData loginData)
+        {
+            string str = string.Format("DELETE FROM Rental WHERE RentalID = '{0}'", RentalID);
+            OracleCommand _command = CreateOracleCommand(loginData, str);
+            _command.ExecuteNonQuery();
+        }
+
+        public static void DeleteVehicleByLicense(string LicensePlate, LoginData loginData)
+        {
+            string str = string.Format("DELETE FROM Vehicle WHERE LicensePlate = '{0}'", LicensePlate);
+            OracleCommand _command = CreateOracleCommand(loginData, str);
+            _command.ExecuteNonQuery();
+        }
+
+        public static void DeletePropertyByMakeAndModel(string Make, string Model, LoginData loginData)
+        {
+            string str = string.Format("DELETE FROM VehicleProperties WHERE Make = '{0}', Model = '{1}'", Make, Model);
+            OracleCommand _command = CreateOracleCommand(loginData, str);
+            _command.ExecuteNonQuery();
+        }
     }
 }
