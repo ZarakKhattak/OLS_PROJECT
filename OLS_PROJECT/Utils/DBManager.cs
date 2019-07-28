@@ -23,7 +23,8 @@ namespace OLS_PROJECT.Utils
             {
                 con.Open();
                 con.Close();
-            } catch(Exception)
+            }
+            catch (Exception)
             {
                 return false;
             }
@@ -31,22 +32,22 @@ namespace OLS_PROJECT.Utils
             return true;
         }
 
-        public static Customer AddCustomer(Customer customer, LoginData loginData)
+        public static void AddCustomer(Customer customer, LoginData loginData)
         {
 
         }
 
-        public static Rental AddRental(Rental rental, LoginData loginData)
+        public static void AddRental(Rental rental, LoginData loginData)
         {
 
         }
 
-        public static Vehicle AddVehicle(Vehicle vehicle, LoginData loginData)
+        public static void AddVehicle(Vehicle vehicle, LoginData loginData)
         {
 
         }
 
-        public static VehicleProperties AddVehicleProperty(VehicleProperties vehicleProperties, LoginData loginData)
+        public static void AddVehicleProperty(VehicleProperties vehicleProperties, LoginData loginData)
         {
 
         }
