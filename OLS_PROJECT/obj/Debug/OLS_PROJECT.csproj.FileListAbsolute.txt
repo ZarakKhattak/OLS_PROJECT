@@ -1,2 +1,0 @@
-C:\Users\patri\OneDrive\Seneca\Semester_6\OLS655\project\OLS_PROJECT\obj\Debug\OLS_PROJECT.csprojAssemblyReference.cache
-C:\Users\patri\OneDrive\Seneca\Semester_6\OLS655\project\OLS_PROJECT\obj\Debug\OLS_PROJECT.csproj.CoreCompileInputs.cache
