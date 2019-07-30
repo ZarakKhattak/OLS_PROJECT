@@ -9,23 +9,13 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="CurrentReservations" runat="server" AutoGenerateColumns="false" BackColor="White"
-                BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4"
-                OnPageIndexChanging="gvPerson_PageIndexChanging"
-                OnRowCancelingEdit="gvPerson_RowCancelingEdit"
-                OnRowDataBound="gvPerson_RowDataBound" OnRowDeleting="gvPerson_RowDeleting"
-                OnRowEditing="gvPerson_RowEditing" OnRowUpdating="gvPerson_RowUpdating"
-                OnSorting="gvPerson_Sorting">
-                <RowStyle BackColor="White" ForeColor="003399" />
-                <Columns>
-                    <!-- <asp:CommandField ShowEditButton="true" /> -->
-                    <!-- <asp:CommandField ShowDeleteButton="true" /> -->
 
 
-                </Columns>
-
-
+            <asp:Button ID="btn_tmp" runat="server" Text="Get Employees" OnClick="btn_tmp_Click1" />
+            <br />
+            <asp:GridView ID="gvCust" runat="server">
             </asp:GridView>
+
         </div>
     </form>
 </body>
