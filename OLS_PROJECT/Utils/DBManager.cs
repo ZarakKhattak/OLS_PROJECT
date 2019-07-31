@@ -33,62 +33,86 @@ namespace OLS_PROJECT.Utils
 
         public static void AddCustomer(Customer customer, LoginData loginData)
         {
-            string str = string.Format("INSERT INTO Customer VALUES ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9})",
+            string str = string.Format("INSERT INTO Customer VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')",
                 customer.CustomerID, customer.FirstName, customer.LastName, customer.Phone, customer.Email, customer.License, customer.Address, customer.Province, customer.Country, customer.PostalCode);
-            OracleCommand _command = CreateOracleCommand(loginData, str);
-            _command.ExecuteNonQuery();
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
+            {
+                _command.Connection.Open();
+                _command.ExecuteNonQuery();
+            }
         }
 
         public static void AddRental(Rental rental, LoginData loginData)
         {
-            string str = string.Format("INSERT INTO Rental VALUES ({0}, {1}, {2}, {3}, {4})",
+            string str = string.Format("INSERT INTO Rental VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')",
                 rental.RentalID, rental.CustomerID, rental.StartDate, rental.EndDate, rental.LicensePlate);
-            OracleCommand _command = CreateOracleCommand(loginData, str);
-            _command.ExecuteNonQuery();
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
+            {
+                _command.Connection.Open();
+                _command.ExecuteNonQuery();
+            }
         }
 
         public static void AddVehicle(Vehicle vehicle, LoginData loginData)
         {
-            string str = string.Format("INSERT INTO Vehicle VALUES ({0}, {1}, {2})",
+            string str = string.Format("INSERT INTO Vehicle VALUES ('{0}', '{1}', '{2}')",
                 vehicle.LicensePlate, vehicle.Make, vehicle.Model);
-            OracleCommand _command = CreateOracleCommand(loginData, str);
-            _command.ExecuteNonQuery();
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
+            {
+                _command.Connection.Open();
+                _command.ExecuteNonQuery();
+            }
         }
 
         public static void AddVehicleProperty(VehicleProperties vehicleProperties, LoginData loginData)
         {
-            string str = string.Format("INSERT INTO VehicleProperties VALUES ({0}, {1}, {2}, {3})",
+            string str = string.Format("INSERT INTO VehicleProperties VALUES ('{0}', '{1}', '{2}', '{3}')",
                 vehicleProperties.Make, vehicleProperties.Model, vehicleProperties.Type, vehicleProperties.Description);
-            OracleCommand _command = CreateOracleCommand(loginData, str);
-            _command.ExecuteNonQuery();
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
+            {
+                _command.Connection.Open();
+                _command.ExecuteNonQuery();
+            }
         }
 
         public static void DeleteCustomerByID(string CustomerID, LoginData loginData)
         {
             string str = string.Format("DELETE FROM Customer WHERE CustomerID = '{0}'", CustomerID);
-            OracleCommand _command = CreateOracleCommand(loginData, str);
-            _command.ExecuteNonQuery();
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
+            {
+                _command.Connection.Open();
+                _command.ExecuteNonQuery();
+            }
         }
 
         public static void DeleteRentalByID(string RentalID, LoginData loginData)
         {
             string str = string.Format("DELETE FROM Rental WHERE RentalID = '{0}'", RentalID);
-            OracleCommand _command = CreateOracleCommand(loginData, str);
-            _command.ExecuteNonQuery();
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
+            {
+                _command.Connection.Open();
+                _command.ExecuteNonQuery();
+            }
         }
 
         public static void DeleteVehicleByLicense(string LicensePlate, LoginData loginData)
         {
             string str = string.Format("DELETE FROM Vehicle WHERE LicensePlate = '{0}'", LicensePlate);
-            OracleCommand _command = CreateOracleCommand(loginData, str);
-            _command.ExecuteNonQuery();
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
+            {
+                _command.Connection.Open();
+                _command.ExecuteNonQuery();
+            }
         }
 
         public static void DeletePropertyByMakeAndModel(string Make, string Model, LoginData loginData)
         {
             string str = string.Format("DELETE FROM VehicleProperties WHERE Make = '{0}', Model = '{1}'", Make, Model);
-            OracleCommand _command = CreateOracleCommand(loginData, str);
-            _command.ExecuteNonQuery();
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
+            {
+                _command.Connection.Open();
+                _command.ExecuteNonQuery();
+            }
         }
     }
 }
