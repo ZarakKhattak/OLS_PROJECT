@@ -14,12 +14,8 @@ namespace OLS_PROJECT.Views
 
         private void InValidLogin()
         {
-
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
+            //TODO complete invalid login method
+            //tbh not really sure wth this will be used for... dont think we need this... if we dont just delete it
         }
 
         protected void Submit_Btn_Click(object sender, EventArgs e)
@@ -43,3 +39,6 @@ namespace OLS_PROJECT.Views
         }
     }
 }
+
+//TODO login aesthetics OPTIONAL
+//if you want, fuck around with login page looks

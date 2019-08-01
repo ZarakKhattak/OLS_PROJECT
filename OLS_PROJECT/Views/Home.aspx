@@ -31,6 +31,16 @@
                         <asp:Button ID="CancelReservation" runat="server" Text="Cancel a Reservation" OnClick="CancelReservation_Click" Width="200" />
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="CreateCustomer" runat="server" Text="Create Customer Profile" OnClick="CreateCustomer_Click" Width="200" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="Logout" runat="server" Text="Logout" OnClick="Logout_Click" Width="200" />
+                    </td>
+                </tr>
             </table>
         </div>
     </form>

@@ -52,22 +52,12 @@ namespace OLS_PROJECT.Utils
                 _command.Connection.Open();
                 _command.ExecuteNonQuery();
             }
-
-            //string str = string.Format("INSERT INTO CUSTOMER " +
-            //    "(FIRSTNAME, LASTNAME, PHONENUMBER, EMAIL, LICENSENUMBER, ADDRESS, PROVINCE, COUNTRY, POSTALCODE) " +
-            //    "VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')",
-            //    customer.FirstName, customer.LastName, customer.Phone, customer.Email, customer.License, customer.Address, customer.Province, customer.Country, customer.PostalCode);
-            //using (OracleCommand _command = CreateOracleCommand(loginData, str))
-            //{
-            //    _command.Connection.Open();
-            //    _command.ExecuteNonQuery();
-            //}
         }
 
         public static void AddRental(Rental rental, LoginData loginData)
         {
             string _query = "INSERT INTO RENTAL (CUSTOMERID, STARTDATE, ENDDATE, LICENSEPLATE) " +
-                "VALUES (:CUSTOMERID, :STARTDATE, :ENDDATE, :EMAIL, :LICENSEPLATE)";
+                "VALUES (:CUSTOMERID, :STARTDATE, :ENDDATE, :LICENSEPLATE)";
             using (OracleCommand _command = CreateOracleCommand(loginData, _query))
             {
                 _command.Parameters.AddWithValue("CUSTOMERID", rental.CustomerID);
@@ -78,16 +68,6 @@ namespace OLS_PROJECT.Utils
                 _command.Connection.Open();
                 _command.ExecuteNonQuery();
             }
-
-
-            //string str = string.Format("INSERT INTO RENTAL (CUSTOMERID, STARTDATE, ENDDATE, LICENSEPLATE) " +
-            //    "VALUES ('{0}', '{1}', '{2}', '{3}')",
-            //    rental.CustomerID, rental.StartDate, rental.EndDate, rental.LicensePlate);
-            //using (OracleCommand _command = CreateOracleCommand(loginData, str))
-            //{
-            //    _command.Connection.Open();
-            //    _command.ExecuteNonQuery();
-            //}
         }
 
         public static void AddVehicle(Vehicle vehicle, LoginData loginData)
@@ -181,7 +161,7 @@ namespace OLS_PROJECT.Utils
                 using (OracleCommand _command = CreateOracleCommand(loginData, str))
                 using (OracleDataAdapter da = new OracleDataAdapter(_command))
                 {
-                    //_command.Connection.Open();
+                    _command.Connection.Open();
                     da.Fill(dt);
                 }
                 return dt;

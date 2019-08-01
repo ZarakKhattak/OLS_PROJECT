@@ -31,32 +31,27 @@ namespace OLS_PROJECT.Views
             }
         }
 
-        //protected void btn_tmp_Click1(object sender, EventArgs e)
-        //{
-        //    LoginData loginData = this.Session["loginData"] as LoginData;
-        //    using (DataSet dt = Utils.DBManager.GetAllRentals(loginData))
-        //    {
-        //        if (dt != null)
-        //        {
-        //            GridViewLabel.Text = string.Empty;
-        //            gvCust.DataSource = dt;
-        //            gvCust.DataBind();
-        //        }
-        //        else
-        //        {
-        //            GridViewLabel.Text = "No Entires have been found.";
-        //        }
-        //    }
-        //}
-
         protected void CancelReservation_Click(object sender, EventArgs e)
         {
-            //open new page showing all personal rentals?
+            //TODO create cancel reservation method
+            //open new page showing all personal rentals? and cancel based on what rental ID user selects
+            //OR load a dropdown picker on home page and have user pick and then hit confirm (confirm BN appears when you press cancel reservation???)
         }
 
         protected void AddReservation_Click(object sender, EventArgs e)
         {
-            //make them give their name, and if 
+            Response.Redirect("./ReservationCreation.aspx");
+        }
+
+        protected void CreateCustomer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./SignUp.aspx");
+        }
+
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("./Login.aspx");
         }
     }
 }
