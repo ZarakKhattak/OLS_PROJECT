@@ -31,5 +31,10 @@ namespace OLS_PROJECT.Views
                 this.noRentalsLabel.Visible= true;
             }
         }
+
+        protected void CancelButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./Home.aspx");
+        }
     }
 }
