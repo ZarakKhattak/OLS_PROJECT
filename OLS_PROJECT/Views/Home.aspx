@@ -15,11 +15,12 @@
         body {
             min-height: 100vh;
             margin: 0;
+            font-family:'Segoe UI';
         }
 
         #control_table {
             background-color: #2F2F2F;
-            width: 230px;
+            width: 240px;
             text-align: center;
             display:inline-block;
             min-height: 100vh;
@@ -40,6 +41,11 @@
             border-radius: 3px;
             border-width:3px;
             margin: 2px;
+            border-color:#181818;
+            background: #1A1A1A;
+            color:white;
+            font-size:20px;
+            padding: 10px;
         }
 
         #title {
@@ -60,17 +66,17 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="CreateCustomer" runat="server" Text="Create Customer Profile" OnClick="CreateCustomer_Click" Width="220" CssClass="NavBtn" />
+                        <asp:Button ID="CreateCustomer" runat="server" Text="Create Customer Profile" OnClick="CreateCustomer_Click" Width="230" CssClass="NavBtn" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="AddReservation" runat="server" Text="Create Reservation" OnClick="AddReservation_Click" Width="220" CssClass="NavBtn" />
+                        <asp:Button ID="AddReservation" runat="server" Text="Create Reservation" OnClick="AddReservation_Click" Width="230" CssClass="NavBtn" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="CancelReservation" runat="server" Text="Cancel Reservation" OnClick="CancelReservation_Click" Width="220" CssClass="NavBtn" />
+                        <asp:Button ID="CancelReservation" runat="server" Text="Cancel Reservation" OnClick="CancelReservation_Click" Width="230" CssClass="NavBtn" />
                     </td>
                 </tr>
                 
