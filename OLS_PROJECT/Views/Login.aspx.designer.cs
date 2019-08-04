@@ -22,6 +22,15 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.HtmlControls.HtmlForm login_form;
         
         /// <summary>
+        /// UsernameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UsernameLabel;
+        
+        /// <summary>
         /// UsernameTxtBox control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace OLS_PROJECT.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
+        /// PasswordLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PasswordLabel;
         
         /// <summary>
         /// PasswordTxtBox control.
