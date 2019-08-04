@@ -22,22 +22,13 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// gvCust control.
+        /// CreateCustomer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCust;
-        
-        /// <summary>
-        /// GridViewLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GridViewLabel;
+        protected global::System.Web.UI.WebControls.Button CreateCustomer;
         
         /// <summary>
         /// AddReservation control.
@@ -58,15 +49,6 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.WebControls.Button CancelReservation;
         
         /// <summary>
-        /// CreateCustomer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateCustomer;
-        
-        /// <summary>
         /// Logout control.
         /// </summary>
         /// <remarks>
@@ -74,5 +56,23 @@ namespace OLS_PROJECT.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Logout;
+        
+        /// <summary>
+        /// gvCust control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvCust;
+        
+        /// <summary>
+        /// GridViewLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GridViewLabel;
     }
 }
