@@ -19,15 +19,13 @@ namespace OLS_PROJECT.Views
             Rental _rental = new Rental()
             {
                 RentalID = null,
-                CustomerID = CustomerIDTB.Text,
+                CustomerID = int.Parse(CustomerIDTB.Text),
                 StartDate = StartDateCal.SelectedDate,
                 EndDate = EndDateCal.SelectedDate,
                 LicensePlate = LicensePlateTB.Text
             };
 
             DBManager.AddRental(_rental, loginData);
-            //TODO fix add new rental error
-            //it freezes within the above method not sure what is going on...
 
             Response.Redirect("./Home.aspx");
         }

@@ -34,8 +34,10 @@ namespace OLS_PROJECT.Views
         protected void CancelReservation_Click(object sender, EventArgs e)
         {
             //TODO create cancel reservation method
+            Response.Redirect("./CancelReservation.aspx");
+
             //open new page showing all personal rentals? and cancel based on what rental ID user selects
-            //OR load a dropdown picker on home page and have user pick and then hit confirm (confirm BN appears when you press cancel reservation???)
+            //OR load a dropdown picker on home page and have user pick and then hit confirm (confirm BTN appears when you press cancel reservation???)
         }
 
         protected void AddReservation_Click(object sender, EventArgs e)

@@ -10,69 +10,60 @@
 namespace OLS_PROJECT.Views {
     
     
-    public partial class Login {
+    public partial class CancelReservation {
         
         /// <summary>
-        /// login_form control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm login_form;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// UsernameTxtBox control.
+        /// gvRentals control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UsernameTxtBox;
+        protected global::System.Web.UI.WebControls.GridView gvRentals;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// noRentalsLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.Label noRentalsLabel;
         
         /// <summary>
-        /// PasswordTxtBox control.
+        /// deleteRentalLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PasswordTxtBox;
+        protected global::System.Web.UI.WebControls.Label deleteRentalLabel;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// deleteRentalTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.TextBox deleteRentalTextBox;
         
         /// <summary>
-        /// LabelInvalidPassword control.
+        /// deleteRentalButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelInvalidPassword;
-        
-        /// <summary>
-        /// Submit_Btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Submit_Btn;
+        protected global::System.Web.UI.WebControls.Button deleteRentalButton;
     }
 }

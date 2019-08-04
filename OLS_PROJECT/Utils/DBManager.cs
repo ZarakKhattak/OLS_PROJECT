@@ -154,15 +154,17 @@ namespace OLS_PROJECT.Utils
             {
                 DataSet dt = new DataSet();
                 string str = string.Format("SELECT RENTAL.RENTALID, CUSTOMER.FIRSTNAME, CUSTOMER.LASTNAME, VEHICLE.LICENSEPLATE, VEHICLE.\"MODEL\", VEHICLEPROPERTIES.\"TYPE\" FROM CUSTOMER" +
-                    "LEFT JOIN RENTAL ON RENTAL.CUSTOMERID = CUSTOMER.CUSTOMERID" +
-                    "LEFT JOIN VEHICLE ON RENTAL.LICENSEPLATE = VEHICLE.LICENSEPLATE" +
-                    "LEFT JOIN VEHICLEPROPERTIES ON VEHICLE.MAKE = VEHICLEPROPERTIES.MAKE");
+                    " LEFT JOIN RENTAL ON RENTAL.CUSTOMERID = CUSTOMER.CUSTOMERID" +
+                    " LEFT JOIN VEHICLE ON RENTAL.LICENSEPLATE = VEHICLE.LICENSEPLATE" +
+                    " LEFT JOIN VEHICLEPROPERTIES ON VEHICLE.MAKE = VEHICLEPROPERTIES.MAKE");
 
                 using (OracleCommand _command = CreateOracleCommand(loginData, str))
-                using (OracleDataAdapter da = new OracleDataAdapter(_command))
                 {
-                    _command.Connection.Open();
-                    da.Fill(dt);
+                    using (OracleDataAdapter da = new OracleDataAdapter(_command))
+                    {
+                        _command.Connection.Open();
+                        da.Fill(dt);
+                    }
                 }
                 return dt;
             }
