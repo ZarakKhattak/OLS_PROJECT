@@ -12,8 +12,6 @@ namespace OLS_PROJECT.Views
 {
     public partial class Login : System.Web.UI.Page
     {
-
-
         private void InValidLogin()
         {
             this.LabelInvalidPassword.Text = "Invalid Login!";
