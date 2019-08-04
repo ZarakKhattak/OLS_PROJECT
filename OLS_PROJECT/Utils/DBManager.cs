@@ -99,7 +99,7 @@ namespace OLS_PROJECT.Utils
             }
         }
 
-        public static void DeleteCustomerByID(string CustomerID, LoginData loginData)
+        public static void DeleteCustomerByID(int CustomerID, LoginData loginData)
         {
             string _query = "DELETE FROM CUSTOMER WHERE CUSTOMERID = :CUSTOMERID";
             using (OracleCommand _command = CreateOracleCommand(loginData, _query))
@@ -111,7 +111,7 @@ namespace OLS_PROJECT.Utils
             }
         }
 
-        public static void DeleteRentalByID(string RentalID, LoginData loginData)
+        public static void DeleteRentalByID(int RentalID, LoginData loginData)
         {
             string _query = "DELETE FROM RENTAL WHERE RENTALID = :RENTALID";
             using (OracleCommand _command = CreateOracleCommand(loginData, _query))
@@ -137,7 +137,7 @@ namespace OLS_PROJECT.Utils
 
         public static void DeletePropertyByMakeAndModel(string Make, string Model, LoginData loginData)
         {
-            string _query = "DELETE FROM VEHICLEPROPERTIES WHERE MAKE = :MAKE, MODEL = :MODEL";
+            string _query = "DELETE FROM VEHICLEPROPERTIES WHERE MAKE = :MAKE, \"MODEL\" = :MODEL";
             using (OracleCommand _command = CreateOracleCommand(loginData, _query))
             {
                 _command.Parameters.AddWithValue("MAKE", Make);
