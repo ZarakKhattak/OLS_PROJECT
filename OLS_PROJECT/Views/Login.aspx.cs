@@ -6,20 +6,23 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using OLS_PROJECT.Model;
 using OLS_PROJECT.Utils;
+using System.Drawing;
 
 namespace OLS_PROJECT.Views
 {
     public partial class Login : System.Web.UI.Page
     {
 
+
         private void InValidLogin()
         {
-
+            this.LabelInvalidPassword.Text = "Invalid Login!";
+            this.LabelInvalidPassword.ForeColor = Color.Red;
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void Submit_Btn_Click(object sender, EventArgs e)
@@ -43,3 +46,6 @@ namespace OLS_PROJECT.Views
         }
     }
 }
+
+//TODO login aesthetics OPTIONAL
+//if you want, fuck around with login page looks

@@ -68,8 +68,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\CancelReservation.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\Login.aspx" />
+    <Content Include="Views\ReservationCreation.aspx" />
+    <Content Include="Views\SignUp.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +83,13 @@
     <Compile Include="Model\VehicleProperties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DBManager.cs" />
+    <Compile Include="Views\CancelReservation.aspx.cs">
+      <DependentUpon>CancelReservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CancelReservation.aspx.designer.cs">
+      <DependentUpon>CancelReservation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,6 +103,20 @@
     </Compile>
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReservationCreation.aspx.cs">
+      <DependentUpon>ReservationCreation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ReservationCreation.aspx.designer.cs">
+      <DependentUpon>ReservationCreation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

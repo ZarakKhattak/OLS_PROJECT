@@ -9,23 +9,39 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="CurrentReservations" runat="server" AutoGenerateColumns="false" BackColor="White"
-                BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4"
-                OnPageIndexChanging="gvPerson_PageIndexChanging"
-                OnRowCancelingEdit="gvPerson_RowCancelingEdit"
-                OnRowDataBound="gvPerson_RowDataBound" OnRowDeleting="gvPerson_RowDeleting"
-                OnRowEditing="gvPerson_RowEditing" OnRowUpdating="gvPerson_RowUpdating"
-                OnSorting="gvPerson_Sorting">
-                <RowStyle BackColor="White" ForeColor="003399" />
-                <Columns>
-                    <!-- <asp:CommandField ShowEditButton="true" /> -->
-                    <!-- <asp:CommandField ShowDeleteButton="true" /> -->
+            <table style="padding: 10px;">
+                <tr>
+                    <td>
+                        <asp:GridView ID="gvCust" runat="server" />
 
-
-                </Columns>
-
-
-            </asp:GridView>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="GridViewLabel" runat="server" Text="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="AddReservation" runat="server" Text="Create a Reservation" OnClick="AddReservation_Click" Width="200" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="CancelReservation" runat="server" Text="Cancel a Reservation" OnClick="CancelReservation_Click" Width="200" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="CreateCustomer" runat="server" Text="Create Customer Profile" OnClick="CreateCustomer_Click" Width="200" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Button ID="Logout" runat="server" Text="Logout" OnClick="Logout_Click" Width="200" />
+                    </td>
+                </tr>
+            </table>
         </div>
     </form>
 </body>

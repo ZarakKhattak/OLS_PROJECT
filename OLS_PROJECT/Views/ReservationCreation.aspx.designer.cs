@@ -10,7 +10,7 @@
 namespace OLS_PROJECT.Views {
     
     
-    public partial class Home {
+    public partial class ReservationCreation {
         
         /// <summary>
         /// form1 control.
@@ -22,57 +22,93 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// gvCust control.
+        /// CustomerIDLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCust;
+        protected global::System.Web.UI.WebControls.Label CustomerIDLabel;
         
         /// <summary>
-        /// GridViewLabel control.
+        /// CustomerIDTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GridViewLabel;
+        protected global::System.Web.UI.WebControls.TextBox CustomerIDTB;
         
         /// <summary>
-        /// AddReservation control.
+        /// StartDateLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddReservation;
+        protected global::System.Web.UI.WebControls.Label StartDateLabel;
         
         /// <summary>
-        /// CancelReservation control.
+        /// StartDateCal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CancelReservation;
+        protected global::System.Web.UI.WebControls.Calendar StartDateCal;
         
         /// <summary>
-        /// CreateCustomer control.
+        /// EndDateLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CreateCustomer;
+        protected global::System.Web.UI.WebControls.Label EndDateLabel;
         
         /// <summary>
-        /// Logout control.
+        /// EndDateCal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Logout;
+        protected global::System.Web.UI.WebControls.Calendar EndDateCal;
+        
+        /// <summary>
+        /// LicensePlateLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LicensePlateLabel;
+        
+        /// <summary>
+        /// LicensePlateTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LicensePlateTB;
+        
+        /// <summary>
+        /// CreateReservationBN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CreateReservationBN;
+        
+        /// <summary>
+        /// CancelBN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CancelBN;
     }
 }
