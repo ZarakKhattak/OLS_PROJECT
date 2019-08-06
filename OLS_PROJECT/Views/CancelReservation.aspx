@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="deleteRentalButton" runat="server" Text="Delete Reservation" Width="150" />
+                        <asp:Button ID="deleteRentalButton" runat="server" Text="Delete Reservation" Width="150" OnClick="deleteRentalButton_Click"/>
                     </td>
                 </tr>
                 <tr>

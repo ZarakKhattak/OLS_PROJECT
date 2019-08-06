@@ -38,10 +38,18 @@ namespace OLS_PROJECT.Views
                 this.noRentalsLabel.Visible= true;
             }
         }
-
+        
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("./Home.aspx");
+        }
+
+        protected void deleteRentalButton_Click(object sender, EventArgs e)
+        {
+            int rentID = int.Parse(deleteRentalTextBox.Text);
+            DBManager.DeleteRentalByID(rentID, loginData);
+
+            Response.Redirect("./CancelReservation.aspx");
         }
     }
 }
