@@ -74,18 +74,6 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="StartDateLabel" runat="server" Text="Start Date:" Width="200" />
-                        <asp:Calendar ID="StartDateCal" runat="server"  />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="EndDateLabel" runat="server" Text="End Date:" Width="200" />
-                        <asp:Calendar ID="EndDateCal" runat="server"  />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <asp:Label ID="LicensePlateLabel" runat="server" Text="Available Vehicles: " Width="200" />
                         <asp:DropDownList ID="LicensePlateDropDown" runat="server" Width="150" />
                     </td>
@@ -93,11 +81,11 @@
                 <tr>
                     <td>
                         <asp:Label ID="StartDateLabel" runat="server" Text="Start Date" Width="200" />
-                        <asp:Calendar ID="StartDateCal" runat="server" CssClass="cal"/>
+                        <asp:Calendar ID="StartDateCal" runat="server" CssClass="cal" OnSelectionChanged="CalanderDateChanged"/>
                     </td>
                     <td>
                         <asp:Label ID="EndDateLabel" runat="server" Text="End Date" Width="200" />
-                        <asp:Calendar ID="EndDateCal" runat="server" CssClass="cal"/>
+                        <asp:Calendar ID="EndDateCal" runat="server" CssClass="cal" OnSelectionChanged="CalanderDateChanged"/>
                     </td>
                 </tr>
                 <tr>
