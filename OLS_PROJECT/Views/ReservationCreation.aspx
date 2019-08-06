@@ -32,17 +32,14 @@
         }
 
         .Btn {
-            border-style:solid;
+            border: 3px solid #181818;
             border-radius: 3px;
-            border-width:3px;
-            margin: 2px;
-            border-color:#181818;
+            margin: 2px 2px 2px 0px;
             background: #1A1A1A;
             color:white;
             font-family:'Segoe UI';
             font-size: 15px;
             padding:5px;
-            width:100%;
         }
 
         .TextBoxCss {
@@ -57,7 +54,16 @@
 
         .cal {
             display:inline-block;
+        }
 
+        .dropdown {
+            background:#181818;
+            border-style: solid;
+            border-width:2px;
+            border-radius: 2px;
+            border-color: #131313;
+            color: #8F8F8F;
+            font-family:'Segoe UI';
         }
 
     </style>
@@ -69,33 +75,31 @@
                 <tr>
                     <td>
                         <asp:Label ID="CustomerNameLabel" runat="server" Text="Customer Name:" Width="200" />
-                        <asp:DropDownList ID="CustomerDropDown" runat="server" Width="200" />
+                        <asp:DropDownList ID="CustomerDropDown" runat="server" Width="200" CssClass="dropdown"/>
                     </td>
-                </tr>
-                <tr>
                     <td>
                         <asp:Label ID="LicensePlateLabel" runat="server" Text="Available Vehicles: " Width="200" />
-                        <asp:DropDownList ID="LicensePlateDropDown" runat="server" Width="200" />
+                        <asp:DropDownList ID="LicensePlateDropDown" runat="server" Width="200" CssClass="dropdown"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label ID="StartDateLabel" runat="server" Text="Start Date" Width="200" />
-                        <asp:Calendar ID="StartDateCal" runat="server" CssClass="cal" OnSelectionChanged="CalanderDateChanged"/>
+                        <br />
+                        <asp:Calendar ID="StartDateCal" runat="server" CssClass="cal" OnSelectionChanged="CalanderDateChanged" ForeColor="White" BackColor="#1A1A1A"/>
                     </td>
                     <td>
                         <asp:Label ID="EndDateLabel" runat="server" Text="End Date" Width="200" />
-                        <asp:Calendar ID="EndDateCal" runat="server" CssClass="cal" OnSelectionChanged="CalanderDateChanged"/>
+                        <br />
+                        <asp:Calendar ID="EndDateCal" runat="server" CssClass="cal" OnSelectionChanged="CalanderDateChanged" BackColor="#1A1A1A" ForeColor="White"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="CreateReservationBN" runat="server" Text="Create Reservation" OnClick="CreateReservationBN_Click" Width="200" CssClass="Btn" />
+                        <asp:Button ID="CreateReservationBN" runat="server" Text="Create Reservation" OnClick="CreateReservationBN_Click" Width="339px" CssClass="Btn" />
                     </td>
-                </tr>
-                <tr>
                     <td>
-                        <asp:Button ID="CancelBN" runat="server" Text="Cancel" OnClick="CancelBN_Click" Width="200" CssClass="Btn" />
+                        <asp:Button ID="CancelBN" runat="server" Text="Cancel" OnClick="CancelBN_Click" Width="333px" CssClass="Btn" />
                     </td>
                 </tr>
                 <tr>
