@@ -75,6 +75,11 @@
                 </tr>
                 <tr>
                     <td>
+                        <asp:Button ID="CreateVehicle" runat="server" Text="Add New Vehicle" OnClick="CreateVehicle_Click" Width="230" CssClass="NavBtn" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <asp:Button ID="AddReservation" runat="server" Text="Create Reservation" OnClick="AddReservation_Click" Width="230" CssClass="NavBtn" />
                     </td>
                 </tr>

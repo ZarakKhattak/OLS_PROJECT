@@ -69,10 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\CancelReservation.aspx" />
+    <Content Include="Views\CreateVehicleAndProperty.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\ReservationCreation.aspx" />
-    <Content Include="Views\SignUp.aspx" />
+    <Content Include="Views\CreateCustomerProfile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="Views\CancelReservation.aspx.designer.cs">
       <DependentUpon>CancelReservation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateVehicleAndProperty.aspx.cs">
+      <DependentUpon>CreateVehicleAndProperty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CreateVehicleAndProperty.aspx.designer.cs">
+      <DependentUpon>CreateVehicleAndProperty.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -111,12 +119,12 @@
     <Compile Include="Views\ReservationCreation.aspx.designer.cs">
       <DependentUpon>ReservationCreation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\SignUp.aspx.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
+    <Compile Include="Views\CreateCustomerProfile.aspx.cs">
+      <DependentUpon>CreateCustomerProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\SignUp.aspx.designer.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
+    <Compile Include="Views\CreateCustomerProfile.aspx.designer.cs">
+      <DependentUpon>CreateCustomerProfile.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

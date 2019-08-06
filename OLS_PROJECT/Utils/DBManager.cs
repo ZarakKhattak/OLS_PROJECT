@@ -118,7 +118,7 @@ namespace OLS_PROJECT.Utils
                 _command.Parameters.AddWithValue("DESC", vehicleProperties.Description);
 
                 _command.Connection.Open();
-                _command.ExecuteNonQuery();
+                _command.ExecuteNonQuery(); //TODO System.Data.OracleClient.OracleException: 'ORA-01745: invalid host/bind variable name
             }
         }
 
@@ -249,6 +249,25 @@ namespace OLS_PROJECT.Utils
                 }
 
                 return _licensePlates;
+            }
+        }
+
+        public static List<string> GetAllMakeAndModels(LoginData loginData)
+        {
+            List<string> _items = new List<string>();
+            string _query = "SELECT MAKE, \"MODEL\" FROM VEHICLEPROPERTIES";
+            using (OracleCommand _command = CreateOracleCommand(loginData, _query))
+            using (OracleDataAdapter da = new OracleDataAdapter(_command))
+            using (DataTable dt = new DataTable())
+            {
+                _command.Connection.Open();
+                da.Fill(dt);
+                foreach (DataRow row in dt.Rows)
+                {
+                    _items.Add(Convert.ToString(row["MAKE"]) + ", " + Convert.ToString(row["MODEL"]));
+                }
+
+                return _items;
             }
         }
     }

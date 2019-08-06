@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="OLS_PROJECT.Views.SignUp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateCustomerProfile.aspx.cs" Inherits="OLS_PROJECT.Views.SignUp" %>
 
 <!DOCTYPE html>
 

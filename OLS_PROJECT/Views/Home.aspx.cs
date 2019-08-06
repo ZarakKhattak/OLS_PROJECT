@@ -48,13 +48,18 @@ namespace OLS_PROJECT.Views
 
         protected void CreateCustomer_Click(object sender, EventArgs e)
         {
-            Response.Redirect("./SignUp.aspx");
+            Response.Redirect("./CreateCustomerProfile.aspx");
         }
 
         protected void Logout_Click(object sender, EventArgs e)
         {
             Session.Abandon();
             Response.Redirect("./Login.aspx");
+        }
+
+        protected void CreateVehicle_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("./CreateVehicleAndProperty.aspx");
         }
     }
 }
