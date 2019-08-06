@@ -40,6 +40,24 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.WebControls.DropDownList CustomerDropDown;
         
         /// <summary>
+        /// LicensePlateLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LicensePlateLabel;
+        
+        /// <summary>
+        /// LicensePlateTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LicensePlateTB;
+        
+        /// <summary>
         /// StartDateLabel control.
         /// </summary>
         /// <remarks>
@@ -74,24 +92,6 @@ namespace OLS_PROJECT.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar EndDateCal;
-        
-        /// <summary>
-        /// LicensePlateLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LicensePlateLabel;
-        
-        /// <summary>
-        /// LicensePlateTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LicensePlateTB;
         
         /// <summary>
         /// CreateReservationBN control.
