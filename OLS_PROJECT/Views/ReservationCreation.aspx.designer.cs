@@ -85,13 +85,13 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.WebControls.Label LicensePlateLabel;
         
         /// <summary>
-        /// LicensePlateTB control.
+        /// LicensePlateDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LicensePlateTB;
+        protected global::System.Web.UI.WebControls.DropDownList LicensePlateDropDown;
         
         /// <summary>
         /// CreateReservationBN control.

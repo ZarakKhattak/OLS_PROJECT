@@ -234,5 +234,29 @@ namespace OLS_PROJECT.Utils
                 return int.Parse(Convert.ToString(_row["CUSTOMERID"]));
             }
         }
+
+        public static List<string> GetCarsAvailableDuringPeriod(DateTime startdate, DateTime enddate, LoginData loginData)
+        {
+            List<string> _licensePlates = new List<string>();
+            string _query = "SELECT LICENSEPLATE FROM VEHICLE WHERE NOT EXISTS " +
+                "(SELECT LICENSEPLATE FROM RENTAL WHERE (:STARTDATE BETWEEN STARTDATE AND ENDDATE) OR (:ENDDATE BETWEEN STARTDATE AND ENDDATE) OR " +
+                "((:STARTDATE < STARTDATE) AND (:ENDDATE > ENDDATE)))";
+            using (OracleCommand _command = CreateOracleCommand(loginData, _query))
+            using (OracleDataAdapter da = new OracleDataAdapter(_command))
+            using (DataTable dt = new DataTable())
+            {
+                _command.Parameters.AddWithValue("STARTDATE", startdate);
+                _command.Parameters.AddWithValue("ENDDATE", enddate);
+
+                _command.Connection.Open();
+                da.Fill(dt);
+                foreach (DataRow row in dt.Rows)
+                {
+                    _licensePlates.Add(Convert.ToString(row["LICENSEPLATE"]));
+                }
+
+                return _licensePlates;
+            }
+        }
     }
 }
