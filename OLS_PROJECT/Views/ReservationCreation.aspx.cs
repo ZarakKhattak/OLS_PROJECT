@@ -38,14 +38,21 @@ namespace OLS_PROJECT.Views
                 }
             }
 
+            //populate the customer names dropdown with all customers found in database
+            this.CustomerDropDown.DataSource = DBManager.GetAllCustomerNames(this.loginData);
+            this.CustomerDropDown.DataBind();
+
+            //TODO configure the dropdown list in create reservation;
+            //make sure that the selected index is not the first entry in the list
+            this.CustomerDropDown.SelectedIndex = 0;    //this doesn't seem to work
+
         }
         protected void CreateReservationBN_Click(object sender, EventArgs e)
         {
-
             Rental _rental = new Rental()
             {
                 RentalID = null,
-                CustomerID = int.Parse(CustomerIDTB.Text),
+                CustomerID = DBManager.GetCustomerIDFromName(this.CustomerDropDown.SelectedValue, this.loginData),
                 StartDate = StartDateCal.SelectedDate,
                 EndDate = EndDateCal.SelectedDate,
                 LicensePlate = LicensePlateTB.Text

@@ -197,5 +197,42 @@ namespace OLS_PROJECT.Utils
                 return null;
             }
         }
+
+        public static List<string> GetAllCustomerNames(LoginData loginData)
+        {
+            List<string> _customers = new List<string>();
+            string _query = "SELECT FIRSTNAME, LASTNAME FROM CUSTOMER";
+            using (OracleCommand _command = CreateOracleCommand(loginData, _query))
+            using (OracleDataAdapter da = new OracleDataAdapter(_command))
+            using (DataTable dt = new DataTable())
+            {
+                _command.Connection.Open();
+                da.Fill(dt);
+
+                foreach(DataRow row in dt.Rows)
+                {
+                    _customers.Add(Convert.ToString(row["FIRSTNAME"]) + " " + Convert.ToString(row["LASTNAME"]));
+                }
+                return _customers;
+            }
+        }
+
+        public static int GetCustomerIDFromName(string name, LoginData loginData)
+        {
+            string[] _customerName = name.Split(' ').ToArray();
+            string _query = "SELECT CUSTOMERID FROM CUSTOMER WHERE FIRSTNAME = :FIRSTNAME AND LASTNAME = :LASTNAME";
+            using (OracleCommand _command = CreateOracleCommand(loginData, _query))
+            using (OracleDataAdapter da = new OracleDataAdapter(_command))
+            using (DataTable dt = new DataTable())
+            {
+                _command.Parameters.AddWithValue("FIRSTNAME", _customerName[0]);
+                _command.Parameters.AddWithValue("LASTNAME", _customerName[1]);
+
+                _command.Connection.Open();
+                da.Fill(dt);
+                DataRow _row = dt.Rows[0];
+                return int.Parse(Convert.ToString(_row["CUSTOMERID"]));
+            }
+        }
     }
 }

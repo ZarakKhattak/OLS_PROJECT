@@ -12,8 +12,8 @@
             <table>
                 <tr>
                     <td>
-                        <asp:Label ID="CustomerIDLabel" runat="server" Text="Customer ID:" Width="200" />
-                        <asp:TextBox ID="CustomerIDTB" runat="server" />
+                        <asp:Label ID="CustomerNameLabel" runat="server" Text="Customer Name:" Width="200" />
+                        <asp:DropDownList ID="CustomerDropDown" runat="server" Width="200" />
                     </td>
                 </tr>
                 <tr>
