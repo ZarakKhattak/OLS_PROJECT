@@ -238,7 +238,7 @@ namespace OLS_PROJECT.Utils
         public static List<string> GetCarsAvailableDuringPeriod(DateTime startdate, DateTime enddate, LoginData loginData)
         {
             List<string> _licensePlates = new List<string>();
-            string _query = "SELECT LICENSEPLATE FROM VEHICLE WHERE NOT EXISTS " +
+            string _query = "SELECT * FROM VEHICLE WHERE NOT EXISTS " +
                 "(SELECT LICENSEPLATE FROM RENTAL WHERE (:STARTDATE BETWEEN STARTDATE AND ENDDATE) OR (:ENDDATE BETWEEN STARTDATE AND ENDDATE) OR " +
                 "((:STARTDATE < STARTDATE) AND (:ENDDATE > ENDDATE)))";
             using (OracleCommand _command = CreateOracleCommand(loginData, _query))
@@ -252,7 +252,7 @@ namespace OLS_PROJECT.Utils
                 da.Fill(dt);
                 foreach (DataRow row in dt.Rows)
                 {
-                    _licensePlates.Add(Convert.ToString(row["LICENSEPLATE"]));
+                    _licensePlates.Add(Convert.ToString(row["LICENSEPLATE"]) + " (" + Convert.ToString(row["MAKE"]) + ", " + Convert.ToString(row["MODEL"]) + ")");
                 }
 
                 return _licensePlates;

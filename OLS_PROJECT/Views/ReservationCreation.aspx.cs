@@ -55,7 +55,7 @@ namespace OLS_PROJECT.Views
                 CustomerID = DBManager.GetCustomerIDFromName(this.CustomerDropDown.SelectedValue, this.loginData),
                 StartDate = StartDateCal.SelectedDate,
                 EndDate = EndDateCal.SelectedDate,
-                LicensePlate = LicensePlateDropDown.SelectedValue
+                LicensePlate = LicensePlateDropDown.SelectedValue.Split(' ').First()
             };
 
             DBManager.AddRental(_rental, loginData);

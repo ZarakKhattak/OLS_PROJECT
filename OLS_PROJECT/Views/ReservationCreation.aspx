@@ -31,7 +31,7 @@
                 <tr>
                     <td>
                         <asp:Label ID="LicensePlateLabel" runat="server" Text="Available Vehicles: " Width="200" />
-                        <asp:DropDownList ID="LicensePlateDropDown" runat="server" Width="150" />
+                        <asp:DropDownList ID="LicensePlateDropDown" runat="server" Width="200" />
                     </td>
                 </tr>
                 <tr>
