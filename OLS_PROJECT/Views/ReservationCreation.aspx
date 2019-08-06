@@ -71,9 +71,23 @@
                         <asp:Label ID="CustomerNameLabel" runat="server" Text="Customer Name:" Width="200" />
                         <asp:DropDownList ID="CustomerDropDown" runat="server" Width="200" />
                     </td>
+                </tr>
+                <tr>
                     <td>
-                        <asp:Label ID="LicensePlateLabel" runat="server" Text="License Plate:" Width="200" />
-                        <asp:TextBox ID="LicensePlateTB" runat="server" />
+                        <asp:Label ID="StartDateLabel" runat="server" Text="Start Date:" Width="200" />
+                        <asp:Calendar ID="StartDateCal" runat="server"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="EndDateLabel" runat="server" Text="End Date:" Width="200" />
+                        <asp:Calendar ID="EndDateCal" runat="server"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="LicensePlateLabel" runat="server" Text="Available Vehicles: " Width="200" />
+                        <asp:DropDownList ID="LicensePlateDropDown" runat="server" Width="150" />
                     </td>
                 </tr>
                 <tr>

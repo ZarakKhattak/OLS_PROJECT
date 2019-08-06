@@ -55,7 +55,7 @@ namespace OLS_PROJECT.Views
                 CustomerID = DBManager.GetCustomerIDFromName(this.CustomerDropDown.SelectedValue, this.loginData),
                 StartDate = StartDateCal.SelectedDate,
                 EndDate = EndDateCal.SelectedDate,
-                LicensePlate = LicensePlateTB.Text
+                LicensePlate = LicensePlateDropDown.SelectedValue
             };
 
             DBManager.AddRental(_rental, loginData);
@@ -67,8 +67,28 @@ namespace OLS_PROJECT.Views
         {
             Response.Redirect("./Home.aspx");
         }
+
+
+        protected void CalanderDateChanged(object sender, EventArgs e)
+        {
+            if (this.EndDateCal.SelectedDate < this.StartDateCal.SelectedDate)
+            {
+                this.LicensePlateDropDown.ClearSelection();
+            } else if (this.EndDateCal.SelectedDate < DateTime.Now | this.StartDateCal.SelectedDate < DateTime.Now)
+            {
+                this.LicensePlateDropDown.ClearSelection();
+            } else
+            {
+                this.LicensePlateDropDown.ClearSelection();
+                this.LicensePlateDropDown.DataSource = DBManager.GetCarsAvailableDuringPeriod(this.StartDateCal.SelectedDate, this.EndDateCal.SelectedDate, this.loginData);
+                this.LicensePlateDropDown.DataBind();
+            }
+        }
     }
 }
 
 //TODO rental aesthetics
 //if you want you can make the rental page prettier or something IDK
+
+//TODO OPTIONAL show only the license plates that are available during the chosen time interval
+//rather than having to run a check and tell user that the car is unavailable
