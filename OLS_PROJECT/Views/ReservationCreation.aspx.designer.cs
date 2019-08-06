@@ -40,6 +40,24 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.WebControls.DropDownList CustomerDropDown;
         
         /// <summary>
+        /// LicensePlateLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LicensePlateLabel;
+        
+        /// <summary>
+        /// LicensePlateDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList LicensePlateDropDown;
+        
+        /// <summary>
         /// StartDateLabel control.
         /// </summary>
         /// <remarks>
@@ -76,24 +94,6 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.WebControls.Calendar EndDateCal;
         
         /// <summary>
-        /// LicensePlateLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LicensePlateLabel;
-        
-        /// <summary>
-        /// LicensePlateDropDown control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList LicensePlateDropDown;
-        
-        /// <summary>
         /// CreateReservationBN control.
         /// </summary>
         /// <remarks>
@@ -110,23 +110,5 @@ namespace OLS_PROJECT.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CancelBN;
-        
-        /// <summary>
-        /// VehicleGrid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView VehicleGrid;
-        
-        /// <summary>
-        /// VehicleGridLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label VehicleGridLabel;
     }
 }

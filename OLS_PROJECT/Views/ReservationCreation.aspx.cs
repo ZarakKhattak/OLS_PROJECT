@@ -24,20 +24,6 @@ namespace OLS_PROJECT.Views
                 return;
             }
 
-            using (DataSet dt = DBManager.GetAllVehicles(loginData))
-            {
-                if (dt != null)
-                {
-                    //GridViewLabel.Text = string.Empty;
-                    VehicleGrid.DataSource = dt;
-                    VehicleGrid.DataBind();
-                }
-                else
-                {
-                    VehicleGridLabel.Text = "No Vehicles Available";
-                }
-            }
-
             //populate the customer names dropdown with all customers found in database
             this.CustomerDropDown.DataSource = DBManager.GetAllCustomerNames(this.loginData);
             this.CustomerDropDown.DataBind();
