@@ -54,10 +54,9 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" autocomplete="off">
         <div id="controls_div">
             <table>
-                
                 <tr>
                     <td>
                         <asp:Label ID="noRentalsLabel" runat="server" Text="No Reservations Exist!" Visible="false"></asp:Label>
@@ -66,7 +65,7 @@
                 <tr>
                     <td>
                         <asp:Label ID="deleteRentalLabel" runat="server" Text="Enter Rental ID to Delete Reservation:"></asp:Label>
-                        <asp:TextBox ID="deleteRentalTextBox" runat="server" Width="150"/>
+                        <asp:TextBox ID="deleteRentalTextBox" runat="server" Width="150" />
                     </td>
                 </tr>
                 <tr>

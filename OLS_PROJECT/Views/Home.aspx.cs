@@ -21,28 +21,24 @@ namespace OLS_PROJECT.Views
                 Response.Redirect("./Login.aspx");
                 return;
             }
-            using (DataSet dt = Utils.DBManager.GetAllRentals(loginData))
+            using (DataTable dt = Utils.DBManager.GetAllRentals(loginData))
             {
                 if (dt != null)
                 {
-                    GridViewLabel.Text = string.Empty;
+                    this.GridViewLabel.Visible = false; //TODO EMPTY label not showing up anywhere on page no matter what
                     gvCust.DataSource = dt;
                     gvCust.DataBind();
                 }
                 else
                 {
-                    GridViewLabel.Text = "No Reservations have been found.";
+                    this.GridViewLabel.Visible = true;
                 }
             }
         }
 
         protected void CancelReservation_Click(object sender, EventArgs e)
         {
-            //TODO create cancel reservation method
             Response.Redirect("./CancelReservation.aspx");
-
-            //open new page showing all personal rentals? and cancel based on what rental ID user selects
-            //OR load a dropdown picker on home page and have user pick and then hit confirm (confirm BTN appears when you press cancel reservation???)
         }
 
         protected void AddReservation_Click(object sender, EventArgs e)

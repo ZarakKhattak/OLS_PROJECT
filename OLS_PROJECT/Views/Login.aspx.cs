@@ -44,6 +44,3 @@ namespace OLS_PROJECT.Views
         }
     }
 }
-
-//TODO login aesthetics OPTIONAL
-//if you want, fuck around with login page looks

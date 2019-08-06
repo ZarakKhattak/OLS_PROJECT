@@ -19,26 +19,25 @@ namespace OLS_PROJECT.Views
         protected void Page_Load(object sender, EventArgs e)
         {
             this.loginData = this.Session["loginData"] as LoginData;
-            DataSet ds = DBManager.GetAllRentals(this.loginData);
-
             if (Session["loginData"] == null || !DBManager.Login(loginData))
             {
                 Response.Redirect("./Login.aspx");
                 return;
             }
 
-            if (ds != null)
+            DataTable dt = DBManager.GetAllRentals(this.loginData);
+            if (dt != null)
             {
-                this.gvRentals.DataSource = ds;
+                this.gvRentals.DataSource = dt;
                 this.gvRentals.DataBind();
-             
+
             }
             else
             {
-                this.noRentalsLabel.Visible= true;
+                this.noRentalsLabel.Visible = true; ///TODO EMPTY label won't appear at all
             }
         }
-        
+
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("./Home.aspx");
@@ -46,10 +45,19 @@ namespace OLS_PROJECT.Views
 
         protected void deleteRentalButton_Click(object sender, EventArgs e)
         {
-            int rentID = int.Parse(deleteRentalTextBox.Text);
-            DBManager.DeleteRentalByID(rentID, loginData);
+            try
+            {
+                int rentID = int.Parse(deleteRentalTextBox.Text);
+                DBManager.DeleteRentalByID(rentID, loginData);
 
-            Response.Redirect("./CancelReservation.aspx");
+                Response.Redirect("./CancelReservation.aspx");
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }
+
+//TODO change color of textbox to match other pages

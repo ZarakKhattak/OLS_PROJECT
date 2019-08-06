@@ -92,7 +92,7 @@
             </table>
             <div id="grid_view_div">
                 <asp:GridView ID="gvCust" runat="server" CellPadding="5" HorizontalAlign="Center" />
-                <asp:Label ID="GridViewLabel" runat="server" Text="" CssClass="label" />
+                <asp:Label ID="GridViewLabel" runat="server" Text="No Reservations have been found." CssClass="label" ForeColor="White" Visible="false"/>
             </div>
         </div>
     </form>

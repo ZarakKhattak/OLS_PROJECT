@@ -171,31 +171,24 @@ namespace OLS_PROJECT.Utils
             }
         }
 
-        public static DataSet GetAllRentals(LoginData loginData)
+        public static DataTable GetAllRentals(LoginData loginData)
         {
-            try
-            {
-                DataSet dt = new DataSet();
-                string str = string.Format(
-                    "SELECT RENTAL.RENTALID, CUSTOMER.FIRSTNAME, CUSTOMER.LASTNAME, VEHICLE.LICENSEPLATE, VEHICLE.\"MODEL\", VEHICLEPROPERTIES.\"TYPE\" FROM RENTAL" +
-                    " LEFT JOIN CUSTOMER ON CUSTOMER.CUSTOMERID = RENTAL.CUSTOMERID" +
-                    " LEFT JOIN VEHICLE ON RENTAL.LICENSEPLATE = VEHICLE.LICENSEPLATE" +
-                    " LEFT JOIN VEHICLEPROPERTIES ON VEHICLE.MAKE = VEHICLEPROPERTIES.MAKE AND VEHICLE.\"MODEL\" = VEHICLEPROPERTIES.\"MODEL\"");
+            DataTable dt = new DataTable();
+            string str = string.Format(
+                "SELECT RENTAL.RENTALID, CUSTOMER.FIRSTNAME, CUSTOMER.LASTNAME, VEHICLE.LICENSEPLATE, VEHICLE.\"MODEL\", VEHICLEPROPERTIES.\"TYPE\" FROM RENTAL" +
+                " LEFT JOIN CUSTOMER ON CUSTOMER.CUSTOMERID = RENTAL.CUSTOMERID" +
+                " LEFT JOIN VEHICLE ON RENTAL.LICENSEPLATE = VEHICLE.LICENSEPLATE" +
+                " LEFT JOIN VEHICLEPROPERTIES ON VEHICLE.MAKE = VEHICLEPROPERTIES.MAKE AND VEHICLE.\"MODEL\" = VEHICLEPROPERTIES.\"MODEL\"");
 
-                using (OracleCommand _command = CreateOracleCommand(loginData, str))
-                {
-                    using (OracleDataAdapter da = new OracleDataAdapter(_command))
-                    {
-                        _command.Connection.Open();
-                        da.Fill(dt);
-                    }
-                }
-                return dt;
-            }
-            catch (Exception)
+            using (OracleCommand _command = CreateOracleCommand(loginData, str))
             {
-                return null;
+                using (OracleDataAdapter da = new OracleDataAdapter(_command))
+                {
+                    _command.Connection.Open();
+                    da.Fill(dt);
+                }
             }
+            return dt;
         }
 
         public static List<string> GetAllCustomerNames(LoginData loginData)

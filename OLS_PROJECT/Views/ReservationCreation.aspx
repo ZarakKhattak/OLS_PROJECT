@@ -69,7 +69,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" autocomplete="off">
         <div id="controls_div">
             <table class="control_table">
                 <tr>
@@ -103,7 +103,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <asp:Label ID="ErrorLabel" runat="server" Visible="false" ForeColor="Red"/>
                     </td>
                 </tr>
