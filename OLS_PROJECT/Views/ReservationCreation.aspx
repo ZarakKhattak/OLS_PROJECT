@@ -44,6 +44,12 @@
                         <asp:Button ID="CancelBN" runat="server" Text="Cancel" OnClick="CancelBN_Click" Width="200" />
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <asp:GridView ID="VehicleGrid" runat="server" />
+                        <asp:Label ID="VehicleGridLabel" runat="server" Text="" />
+                    </td>
+                </tr>
             </table>
         </div>
     </form>
