@@ -4,74 +4,124 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Sign up</title>
+    <style>
+        html body {
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            background: #1A1A1A;
+            color: white;
+            font-family: 'Segoe UI';
+        }
+
+        .label {
+            text-align:left;
+        }
+
+        #controls_div {
+            display:inline-block;
+            margin-left:auto;
+            margin-right:auto;
+            background: #2F2F2F;
+            border-radius:5px;
+            padding: 10px;
+            margin-top: 20%;
+            
+        }
+
+        .Btn {
+            border-style:solid;
+            border-radius: 3px;
+            border-width:3px;
+            margin: 2px;
+            border-color:#181818;
+            background: #1A1A1A;
+            color:white;
+            font-family:'Segoe UI';
+            font-size: 15px;
+            padding:5px;
+            width:90%;
+        }
+
+        .TextBoxCss {
+            background:#181818;
+            border-style: solid;
+            border-width:2px;
+            border-radius: 2px;
+            border-color: #131313;
+            color: #8F8F8F;
+            font-family:'Segoe UI';
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <table>
+        <div id="controls_div">
+            <table id="table">
                 <tr>
                     <td>
-                        <asp:Label ID="FirstNameLabel" runat="server" Text="First Name:" Width="200" />
-                        <asp:TextBox ID="FirstNameTB" runat="server" />
+                        <asp:Label ID="FirstNameLabel" runat="server" Text="First Name:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="FirstNameTB" runat="server" CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="LastNameLabel" runat="server" Text="Last Name:" Width="200" />
-                        <asp:TextBox ID="LastNameTB" runat="server" />
+                        <asp:Label ID="LastNameLabel" runat="server" Text="Last Name:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="LastNameTB" runat="server"  CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="EmailLabel" runat="server" Text="Email:" Width="200" />
-                        <asp:TextBox ID="EmailTB" runat="server" />
+                        <asp:Label ID="EmailLabel" runat="server" Text="Email:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="EmailTB" runat="server"  CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="PhoneNumberLabel" runat="server" Text="Phone Number:" Width="200" />
-                        <asp:TextBox ID="PhoneNumberTB" runat="server" />
+                        <asp:Label ID="PhoneNumberLabel" runat="server" Text="Phone Number:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="PhoneNumberTB" runat="server"  CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="CountryLabel" runat="server" Text="Country:" Width="200" />
-                        <asp:TextBox ID="CountryTB" runat="server" />
+                        <asp:Label ID="CountryLabel" runat="server" Text="Country:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="CountryTB" runat="server"  CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="ProvinceLabel" runat="server" Text="Province:" Width="200" />
-                        <asp:TextBox ID="ProvinceTB" runat="server" />
+                        <asp:Label ID="ProvinceLabel" runat="server" Text="Province:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="ProvinceTB" runat="server"  CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="AddressLabel" runat="server" Text="Address:" Width="200" />
-                        <asp:TextBox ID="AddressTB" runat="server" />
+                        <asp:Label ID="AddressLabel" runat="server" Text="Address:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="AddressTB" runat="server"  CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="PostalCodeLabel" runat="server" Text="Postal Code:" Width="200" />
-                        <asp:TextBox ID="PostalCodeTB" runat="server" />
+                        <asp:Label ID="PostalCodeLabel" runat="server" Text="Postal Code:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="PostalCodeTB" runat="server"  CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="LicenseNumberLabel" runat="server" Text="License Number:" Width="200" />
-                        <asp:TextBox ID="LicenseNumberTB" runat="server" />
+                        <asp:Label ID="LicenseNumberLabel" runat="server" Text="License Number:" Width="200" CssClass="label" />
+                        <asp:TextBox ID="LicenseNumberTB" runat="server"  CssClass="TextBoxCss"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="CreateAccountBN" runat="server" Text="Create Account" OnClick="CreateCustomer_Click" />
+                        <asp:Button ID="CreateAccountBN" runat="server" Text="Create Account" OnClick="CreateCustomer_Click" CssClass="Btn"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Cancel" OnClick="Cancel_Click" />
+                        <asp:Button ID="Button1" runat="server" Text="Cancel" OnClick="Cancel_Click" CssClass="Btn" />
                     </td>
                 </tr>
             </table>

@@ -16,6 +16,11 @@ namespace OLS_PROJECT.Views
         protected void Page_Load(object sender, EventArgs e)
         {
             LoginData loginData = this.Session["loginData"] as LoginData;
+            if(Session["loginData"] == null || !DBManager.Login(loginData))
+            {
+                Response.Redirect("./Login.aspx");
+                return;
+            }
             using (DataSet dt = Utils.DBManager.GetAllRentals(loginData))
             {
                 if (dt != null)

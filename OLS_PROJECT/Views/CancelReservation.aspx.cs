@@ -9,6 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
+
 namespace OLS_PROJECT.Views
 {
     public partial class CancelReservation : System.Web.UI.Page
@@ -20,7 +21,13 @@ namespace OLS_PROJECT.Views
             this.loginData = this.Session["loginData"] as LoginData;
             DataSet ds = DBManager.GetAllRentals(this.loginData);
 
-            if(ds != null)
+            if (Session["loginData"] == null || !DBManager.Login(loginData))
+            {
+                Response.Redirect("./Login.aspx");
+                return;
+            }
+
+            if (ds != null)
             {
                 this.gvRentals.DataSource = ds;
                 this.gvRentals.DataBind();
@@ -31,10 +38,18 @@ namespace OLS_PROJECT.Views
                 this.noRentalsLabel.Visible= true;
             }
         }
-
+        
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("./Home.aspx");
+        }
+
+        protected void deleteRentalButton_Click(object sender, EventArgs e)
+        {
+            int rentID = int.Parse(deleteRentalTextBox.Text);
+            DBManager.DeleteRentalByID(rentID, loginData);
+
+            Response.Redirect("./CancelReservation.aspx");
         }
     }
 }

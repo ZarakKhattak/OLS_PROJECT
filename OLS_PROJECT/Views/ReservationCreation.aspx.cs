@@ -13,9 +13,20 @@ namespace OLS_PROJECT.Views
 {
     public partial class ReservationCreation : System.Web.UI.Page
     {
+        private LoginData loginData;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            this.loginData = this.Session["loginData"] as LoginData;
+            if (Session["loginData"] == null || !DBManager.Login(loginData))
+            {
+                Response.Redirect("./Login.aspx");
+                return;
+            }
+
+        }
         protected void CreateReservationBN_Click(object sender, EventArgs e)
         {
-            LoginData loginData = this.Session["loginData"] as LoginData;
+            
             Rental _rental = new Rental()
             {
                 RentalID = null,
