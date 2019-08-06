@@ -49,3 +49,5 @@ namespace OLS_PROJECT.Views
         }
     }
 }
+
+//TODO setup creation so that every field HAS to be filled

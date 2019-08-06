@@ -28,25 +28,29 @@ namespace OLS_PROJECT.Views
             this.CustomerDropDown.DataSource = DBManager.GetAllCustomerNames(this.loginData);
             this.CustomerDropDown.DataBind();
 
-            //TODO configure the dropdown list in create reservation;
-            //make sure that the selected index is not the first entry in the list
-            this.CustomerDropDown.SelectedIndex = 0;    //this doesn't seem to work
-
         }
         protected void CreateReservationBN_Click(object sender, EventArgs e)
         {
-            Rental _rental = new Rental()
+            try
             {
-                RentalID = null,
-                CustomerID = DBManager.GetCustomerIDFromName(this.CustomerDropDown.SelectedValue, this.loginData),
-                StartDate = StartDateCal.SelectedDate,
-                EndDate = EndDateCal.SelectedDate,
-                LicensePlate = LicensePlateDropDown.SelectedValue.Split(' ').First()
-            };
+                this.ErrorLabel.Visible = false;
+                Rental _rental = new Rental()
+                {
+                    RentalID = null,
+                    CustomerID = DBManager.GetCustomerIDFromName(this.CustomerDropDown.SelectedValue, this.loginData),
+                    StartDate = StartDateCal.SelectedDate,
+                    EndDate = EndDateCal.SelectedDate,
+                    LicensePlate = LicensePlateDropDown.SelectedValue.Split(' ').First()
+                };
 
-            DBManager.AddRental(_rental, loginData);
+                DBManager.AddRental(_rental, loginData);
 
-            Response.Redirect("./Home.aspx");
+                Response.Redirect("./Home.aspx");
+            } catch (Exception)
+            {
+                this.ErrorLabel.Visible = true;
+                this.ErrorLabel.Text = "!!ERROR!! - Please look over all fields and make sure they are valid.";
+            }
         }
 
         protected void CancelBN_Click(object sender, EventArgs e)
@@ -72,9 +76,3 @@ namespace OLS_PROJECT.Views
         }
     }
 }
-
-//TODO rental aesthetics
-//if you want you can make the rental page prettier or something IDK
-
-//TODO OPTIONAL show only the license plates that are available during the chosen time interval
-//rather than having to run a check and tell user that the car is unavailable

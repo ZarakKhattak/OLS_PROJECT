@@ -98,6 +98,11 @@
                         <asp:Button ID="CancelBN" runat="server" Text="Cancel" OnClick="CancelBN_Click" Width="200" CssClass="Btn" />
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="ErrorLabel" runat="server" Visible="false" ForeColor="Red"/>
+                    </td>
+                </tr>
             </table>
         </div>
     </form>
