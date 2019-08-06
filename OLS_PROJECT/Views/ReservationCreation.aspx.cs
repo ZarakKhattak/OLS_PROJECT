@@ -8,6 +8,7 @@ using OLS_PROJECT;
 using OLS_PROJECT.Utils;
 using OLS_PROJECT.Model;
 using OLS_PROJECT.Views;
+using System.Data;
 
 namespace OLS_PROJECT.Views
 {
@@ -23,10 +24,24 @@ namespace OLS_PROJECT.Views
                 return;
             }
 
+            using (DataSet dt = DBManager.GetAllVehicles(loginData))
+            {
+                if (dt != null)
+                {
+                    //GridViewLabel.Text = string.Empty;
+                    VehicleGrid.DataSource = dt;
+                    VehicleGrid.DataBind();
+                }
+                else
+                {
+                    VehicleGridLabel.Text = "No Vehicles Available";
+                }
+            }
+
         }
         protected void CreateReservationBN_Click(object sender, EventArgs e)
         {
-            
+
             Rental _rental = new Rental()
             {
                 RentalID = null,

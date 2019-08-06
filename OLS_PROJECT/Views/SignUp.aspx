@@ -27,7 +27,7 @@
             background: #2F2F2F;
             border-radius:5px;
             padding: 10px;
-            margin-top: 20%;
+            margin-top: 10%;
             
         }
 

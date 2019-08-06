@@ -33,6 +33,29 @@ namespace OLS_PROJECT.Utils
             return true;
         }
 
+        public static DataSet GetAllVehicles(LoginData loginData)
+        {
+            try
+            {
+                DataSet dt = new DataSet();
+                string str = string.Format("SELECT * FROM VEHICLE");
+
+                using (OracleCommand _command = CreateOracleCommand(loginData, str))
+                {
+                    using (OracleDataAdapter da = new OracleDataAdapter(_command))
+                    {
+                        _command.Connection.Open();
+                        da.Fill(dt);
+                    }
+                }
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public static void AddCustomer(Customer customer, LoginData loginData)
         {
             string _query = "INSERT INTO CUSTOMER (FIRSTNAME, LASTNAME, PHONENUMBER, EMAIL, LICENSENUMBER, ADDRESS, PROVINCE, COUNTRY, POSTALCODE) " +
@@ -153,10 +176,11 @@ namespace OLS_PROJECT.Utils
             try
             {
                 DataSet dt = new DataSet();
-                string str = string.Format("SELECT RENTAL.RENTALID, CUSTOMER.FIRSTNAME, CUSTOMER.LASTNAME, VEHICLE.LICENSEPLATE, VEHICLE.\"MODEL\", VEHICLEPROPERTIES.\"TYPE\" FROM CUSTOMER" +
-                    " LEFT JOIN RENTAL ON RENTAL.CUSTOMERID = CUSTOMER.CUSTOMERID" +
+                string str = string.Format(
+                    "SELECT RENTAL.RENTALID, CUSTOMER.FIRSTNAME, CUSTOMER.LASTNAME, VEHICLE.LICENSEPLATE, VEHICLE.\"MODEL\", VEHICLEPROPERTIES.\"TYPE\" FROM RENTAL" +
+                    " LEFT JOIN CUSTOMER ON CUSTOMER.CUSTOMERID = RENTAL.CUSTOMERID" +
                     " LEFT JOIN VEHICLE ON RENTAL.LICENSEPLATE = VEHICLE.LICENSEPLATE" +
-                    " LEFT JOIN VEHICLEPROPERTIES ON VEHICLE.MAKE = VEHICLEPROPERTIES.MAKE");
+                    " LEFT JOIN VEHICLEPROPERTIES ON VEHICLE.MAKE = VEHICLEPROPERTIES.MAKE AND VEHICLE.\"MODEL\" = VEHICLEPROPERTIES.\"MODEL\"");
 
                 using (OracleCommand _command = CreateOracleCommand(loginData, str))
                 {

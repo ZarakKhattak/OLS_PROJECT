@@ -38,7 +38,7 @@ namespace OLS_PROJECT.Views
                 Phone = PhoneNumberTB.Text,
                 License = LicenseNumberTB.Text
             };
-            Utils.DBManager.AddCustomer(_customer, loginData);
+            DBManager.AddCustomer(_customer, loginData);
 
             Response.Redirect("./Home.aspx");
         }

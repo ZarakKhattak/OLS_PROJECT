@@ -53,6 +53,10 @@
             font-family:'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
         }
 
+        .label {
+            display:inline-block;
+        }
+
     </style>
 </head>
 <body>
@@ -88,7 +92,7 @@
             </table>
             <div id="grid_view_div">
                 <asp:GridView ID="gvCust" runat="server" CellPadding="5" HorizontalAlign="Center" />
-                <asp:Label ID="GridViewLabel" runat="server" Text="" />
+                <asp:Label ID="GridViewLabel" runat="server" Text="" CssClass="label" />
             </div>
         </div>
     </form>
