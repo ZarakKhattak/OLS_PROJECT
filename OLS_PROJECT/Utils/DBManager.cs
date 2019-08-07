@@ -109,16 +109,16 @@ namespace OLS_PROJECT.Utils
 
         public static void AddVehicleProperty(VehicleProperties vehicleProperties, LoginData loginData)
         {
-            string _query = "INSERT INTO VEHICLEPROPERTIES VALUES (:MAKE, :MODEL, :TYPE, :DESC)";
+            string _query = "INSERT INTO VEHICLEPROPERTIES VALUES (:MAKE, :MODEL, :TYPE, :DESCRIPTION)";
             using (OracleCommand _command = CreateOracleCommand(loginData, _query))
             {
                 _command.Parameters.AddWithValue("MAKE", vehicleProperties.Make);
                 _command.Parameters.AddWithValue("MODEL", vehicleProperties.Model);
                 _command.Parameters.AddWithValue("TYPE", vehicleProperties.Type);
-                _command.Parameters.AddWithValue("DESC", vehicleProperties.Description);
+                _command.Parameters.AddWithValue("DESCRIPTION", vehicleProperties.Description);
 
                 _command.Connection.Open();
-                _command.ExecuteNonQuery(); //TODO System.Data.OracleClient.OracleException: 'ORA-01745: invalid host/bind variable name
+                _command.ExecuteNonQuery();
             }
         }
 

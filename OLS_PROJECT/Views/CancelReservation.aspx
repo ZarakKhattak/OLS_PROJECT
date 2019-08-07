@@ -59,12 +59,12 @@
             <table>
                 <tr>
                     <td>
-                        <asp:Label ID="noRentalsLabel" runat="server" Text="No Reservations Exist!" Visible="false"></asp:Label>
+                        <asp:Label ID="noRentalsLabel" runat="server" Text="No Reservations Exist!" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="deleteRentalLabel" runat="server" Text="Enter Rental ID to Delete Reservation:"></asp:Label>
+                        <asp:Label ID="deleteRentalLabel" runat="server" Text="Enter Rental ID to Delete Reservation:" />
                         <asp:TextBox ID="deleteRentalTextBox" runat="server" Width="150" />
                     </td>
                 </tr>
