@@ -23,7 +23,7 @@ namespace OLS_PROJECT.Views
             }
             using (DataTable dt = Utils.DBManager.GetAllRentals(loginData))
             {
-                if (dt != null)
+                if (dt.Rows.Count != 0)
                 {
                     this.GridViewLabel.Visible = false; //TODO EMPTY label not showing up anywhere on page no matter what
                     gvCust.DataSource = dt;
