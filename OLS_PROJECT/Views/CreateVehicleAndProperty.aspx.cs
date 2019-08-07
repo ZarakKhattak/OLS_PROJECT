@@ -15,6 +15,7 @@ namespace OLS_PROJECT.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             this.loginData = this.Session["loginData"] as LoginData;
             if (Session["loginData"] == null || !DBManager.Login(loginData))
             {
@@ -27,6 +28,10 @@ namespace OLS_PROJECT.Views
 
         protected void CreateVehicleBN_Click(object sender, EventArgs e)
         {
+            this.Validate();
+            if (!this.IsValid)
+                return;
+
             if (this.CreateNewPropertyRadio.SelectedIndex == 0)
             {
                 Vehicle _vehicle = new Vehicle()

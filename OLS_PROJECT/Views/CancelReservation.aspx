@@ -66,12 +66,14 @@
                     <td>
                         <asp:Label ID="deleteRentalLabel" runat="server" Text="Enter Rental ID to Delete Reservation:" />
                         <asp:TextBox ID="deleteRentalTextBox" runat="server" Width="150" CssClass="TextBoxCss" />
+                        <br />
+                        <asp:RequiredFieldValidator ID="val" runat="server" ControlToValidate="deleteRentalTextBox" ErrorMessage="Field Required" ForeColor="Red" />
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Button ID="deleteRentalButton" runat="server" Text="Delete Reservation" Width="170px" OnClick="deleteRentalButton_Click" CssClass="Btn"/>
-                        <asp:Button ID="CancelButton" runat="server" Text="Cancel" Width="170px" OnClick="CancelButton_Click" CssClass="Btn" />
+                        <asp:Button ID="CancelButton" runat="server" Text="Cancel" Width="170px" OnClick="CancelButton_Click" CssClass="Btn" CausesValidation="false" />
                     </td>
                 </tr>
                 <tr>

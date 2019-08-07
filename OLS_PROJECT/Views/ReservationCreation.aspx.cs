@@ -17,6 +17,7 @@ namespace OLS_PROJECT.Views
         private LoginData loginData;
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             this.loginData = this.Session["loginData"] as LoginData;
             if (Session["loginData"] == null || !DBManager.Login(loginData))
             {
@@ -31,6 +32,10 @@ namespace OLS_PROJECT.Views
         }
         protected void CreateReservationBN_Click(object sender, EventArgs e)
         {
+
+            this.Validate();
+            if (!this.IsValid)
+                return;
             try
             {
                 this.ErrorLabel.Visible = false;

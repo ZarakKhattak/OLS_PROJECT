@@ -99,7 +99,7 @@
                         <asp:Button ID="CreateReservationBN" runat="server" Text="Create Reservation" OnClick="CreateReservationBN_Click" Width="339px" CssClass="Btn" />
                     </td>
                     <td>
-                        <asp:Button ID="CancelBN" runat="server" Text="Cancel" OnClick="CancelBN_Click" Width="333px" CssClass="Btn" />
+                        <asp:Button ID="CancelBN" runat="server" Text="Cancel" OnClick="CancelBN_Click" Width="333px" CssClass="Btn" CausesValidation="false" />
                     </td>
                 </tr>
                 <tr>

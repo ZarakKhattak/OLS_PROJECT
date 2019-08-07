@@ -40,6 +40,15 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.WebControls.TextBox LicensePlateTB;
         
         /// <summary>
+        /// val control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator val;
+        
+        /// <summary>
         /// CreateNewPropertyRadio control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.WebControls.TextBox MakeTB;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// ModelLabel control.
         /// </summary>
         /// <remarks>
@@ -83,6 +101,15 @@ namespace OLS_PROJECT.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ModelTB;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// TypeLabel control.
@@ -103,6 +130,15 @@ namespace OLS_PROJECT.Views {
         protected global::System.Web.UI.WebControls.TextBox TypeTB;
         
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// DescriptionLabel control.
         /// </summary>
         /// <remarks>
@@ -119,6 +155,15 @@ namespace OLS_PROJECT.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DescriptionTB;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// MakeModelLabel control.
