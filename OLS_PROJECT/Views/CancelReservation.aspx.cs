@@ -26,7 +26,7 @@ namespace OLS_PROJECT.Views
             }
 
             DataTable dt = DBManager.GetAllRentals(this.loginData);
-            if (dt.ExtendedProperties.Count != 0)
+            if (dt != null)
             {
                 this.noRentalsLabel.Visible = false;
                 this.gvRentals.DataSource = dt;
@@ -35,7 +35,7 @@ namespace OLS_PROJECT.Views
             }
             else
             {
-                this.noRentalsLabel.Visible = true; ///TODO EMPTY label won't appear at all
+                this.noRentalsLabel.Visible = true; ///TODO this condition is never true, dt is never null even if it finds no rows
             }
         }
 
