@@ -60,5 +60,3 @@ namespace OLS_PROJECT.Views
         }
     }
 }
-
-//TODO change color of textbox to match other pages
