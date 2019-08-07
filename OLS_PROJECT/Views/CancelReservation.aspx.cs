@@ -26,7 +26,7 @@ namespace OLS_PROJECT.Views
             }
 
             DataTable dt = DBManager.GetAllRentals(this.loginData);
-            if (dt != null)
+            if (dt.Rows.Count != 0)
             {
                 this.noRentalsLabel.Visible = false;
                 this.gvRentals.DataSource = dt;
