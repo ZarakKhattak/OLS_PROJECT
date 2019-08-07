@@ -81,6 +81,8 @@
                     <td>
                         <asp:Label ID="LicensePlateLabel" runat="server" Text="License Plate:" Width="150" CssClass="label"/>
                         <asp:TextBox ID="LicensePlateTB" runat="server" Width="150"  CssClass="TextBoxCss"/>
+                        <br />
+                        <asp:RequiredFieldValidator ID="val" runat="server" ControlToValidate="LicensePlateTB" ErrorMessage="Field Required" ForeColor="Red" />
                     </td>
                 </tr>
                 <tr>
@@ -96,24 +98,32 @@
                     <td>
                         <asp:Label ID="MakeLabel" runat="server" Text="Make:" Width="150"  CssClass="label"/>
                         <asp:TextBox ID="MakeTB" runat="server" Width="150" CssClass="TextBoxCss"/>
+                        <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="MakeTB" ErrorMessage="Field Required" ForeColor="Red" />
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label ID="ModelLabel" runat="server" Text="Model:" Width="150"  CssClass="label"/>
                         <asp:TextBox ID="ModelTB" runat="server" Width="150" CssClass="TextBoxCss" />
+                        <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ModelTB" ErrorMessage="Field Required" ForeColor="Red" />
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label ID="TypeLabel" runat="server" Text="Type:" Width="150" CssClass="label" />
                         <asp:TextBox ID="TypeTB" runat="server" Width="150" CssClass="TextBoxCss" />
+                        <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TypeTB" ErrorMessage="Field Required" ForeColor="Red" />
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label ID="DescriptionLabel" runat="server" Text="Description:" Width="150" CssClass="label" />
                         <asp:TextBox ID="DescriptionTB" runat="server" Width="150" CssClass="TextBoxCss" />
+                        <br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="DescriptionTB" ErrorMessage="Field Required" ForeColor="Red" />
                     </td>
                 </tr>
                 <%-- use existing --%>
@@ -126,7 +136,7 @@
                 <tr>
                     <td>
                         <asp:Button ID="CreateVehicleBN" runat="server" Text="Create" Width="150" OnClick="CreateVehicleBN_Click" CssClass="Btn"/>
-                        <asp:Button ID="Cancel" runat="server" Text="Cancel" OnClick="Cancel_Click" Width="150" CssClass="Btn"/>
+                        <asp:Button ID="Cancel" runat="server" Text="Cancel" OnClick="Cancel_Click" Width="150" CssClass="Btn" CausesValidation="false"/>
                     </td>
                 </tr>
             </table>
