@@ -65,7 +65,7 @@
                 <tr>
                     <td>
                         <asp:Label ID="deleteRentalLabel" runat="server" Text="Enter Rental ID to Delete Reservation:" />
-                        <asp:TextBox ID="deleteRentalTextBox" runat="server" Width="150" />
+                        <asp:TextBox ID="deleteRentalTextBox" runat="server" Width="150" CssClass="TextBoxCss" />
                     </td>
                 </tr>
                 <tr>
