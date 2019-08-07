@@ -16,6 +16,7 @@
             min-height: 100vh;
             margin: 0;
             font-family:'Segoe UI';
+            overflow:hidden;
         }
 
         #control_table {
@@ -54,7 +55,7 @@
         }
 
         .label {
-            display:inline-block;
+            display:inline-flex;
         }
 
     </style>
@@ -96,8 +97,8 @@
                 </tr>
             </table>
             <div id="grid_view_div">
-                <asp:GridView ID="gvCust" runat="server" CellPadding="5" HorizontalAlign="Center" />
                 <asp:Label ID="GridViewLabel" runat="server" Text="No Reservations have been found." CssClass="label" ForeColor="White" Visible="false"/>
+                <asp:GridView ID="gvCust" runat="server" CellPadding="5" HorizontalAlign="Center" />
             </div>
         </div>
     </form>
